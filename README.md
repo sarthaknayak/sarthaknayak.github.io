@@ -1,1 +1,1 @@
-# sarthaknayak.github.io
+# sarthaknayak.com
