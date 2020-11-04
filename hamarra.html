@@ -249,7 +249,7 @@
 
             </form>
           </div>
-          <div class="uk-card uk-card-body" id="hidden_div" style="display:none">
+          <div class="uk-card uk-card-body" id="hidden_div">
             <h3 class="uk-text-emphasis">thanks for signing up!</h3>
           </div>
         </div>
@@ -309,20 +309,6 @@
 </nav>
 
 <script>
-    
- var form = document.getElementById("myForm");
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
-
-function showHide() {
-   var div = document.getElementById(hidden_div);
-   if (div.style.display == 'none') {
-     div.style.display = '';
-   }
-   else {
-     div.style.display = 'none';
-   }
- }	
 
 window.getCookie = function(name) {
   var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -380,9 +366,7 @@ function formv3(){
     // Sends the request 
     
     xhr.send(final_data)
-    
-    showHide()
-  
+      
  }
 </script>
 
