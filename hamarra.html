@@ -20,18 +20,6 @@
 <!-- Ajax -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script type="text/javascript">
- function showHide() {
-   var div = document.getElementById(hidden_div);
-   if (div.style.display == 'none') {
-     div.style.display = '';
-   }
-   else {
-     div.style.display = 'none';
-   }
- }
-</script>
-
 <style>
     
   font-family: 'Questrial', sans-serif;
@@ -326,6 +314,16 @@
 
 <script>
 
+function showHide() {
+   var div = document.getElementById(hidden_div);
+   if (div.style.display == 'none') {
+     div.style.display = '';
+   }
+   else {
+     div.style.display = 'none';
+   }
+ }	
+
 window.getCookie = function(name) {
   var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
   if (match) return match[2];
@@ -382,6 +380,8 @@ function formv3(){
     // Sends the request 
     
     xhr.send(final_data)
+    
+    showHide()
   
  }
 </script>
