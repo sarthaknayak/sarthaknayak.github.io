@@ -369,11 +369,17 @@ function formv3(){
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) { 
             //alert(xhr.responseText); // Returns a 200 response if the submission is successful.
+            console.log("successfully submitted!)
+            showHide()
         } else if (xhr.readyState == 4 && xhr.status == 400){ 
+            console.log("400 error!)
             //alert(xhr.responseText); // Returns a 400 error the submission is rejected.          
         } else if (xhr.readyState == 4 && xhr.status == 403){ 
+                            console.log("403 error!)
             //alert(xhr.responseText); // Returns a 403 error if the portal isn't allowed to post submissions.           
         } else if (xhr.readyState == 4 && xhr.status == 404){ 
+                                            console.log("404 error!)
+
             //alert(xhr.responseText); //Returns a 404 error if the formGuid isn't found     
         }
        }
@@ -381,8 +387,6 @@ function formv3(){
     // Sends the request 
     
     xhr.send(final_data)
-    
-    showHide()
  }
 </script>
 
