@@ -234,7 +234,7 @@
         </div>
           <div class="uk-card uk-card-body" id="first" style="display:">
             <h3 class="uk-text-emphasis">join our <br>early access beta list</h3>
-            <form onsubmit="formv3()" id="myform">
+            <form onsubmit="formv3()" id="myForm">
 
               <div class="uk-margin">
                 <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="First Name" id="firstname" required>
@@ -249,7 +249,7 @@
 
             </form>
           </div>
-          <div class="uk-card uk-card-body" id="second" style="display:none">
+          <div class="uk-card uk-card-body" id="hidden_div" style="display:none">
             <h3 class="uk-text-emphasis">thanks for signing up!</h3>
           </div>
         </div>
@@ -310,13 +310,9 @@
 
 <script>
     
- $(document).ready(function() {
-        $("#myform").submit(function(e) {
-            e.preventDefault();
-            $("#first").hide();
-            $("#second").show();
-        });
-    });
+ var form = document.getElementById("myForm");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
 
 function showHide() {
    var div = document.getElementById(hidden_div);
