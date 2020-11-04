@@ -367,7 +367,10 @@ function formv3(){
         if(xhr.readyState == 4 && xhr.status == 200) { 
             //alert(xhr.responseText); // Returns a 200 response if the submission is successful.
             console.log("successfully submitted!")
-            showHide()
+            var x = document.getElementById("first");
+            var y = document.getElementById("hidden_div");
+            x.style.display = "none";
+            y.style.display = "block";
         } else if (xhr.readyState == 4 && xhr.status == 400){ 
             console.log("400 error!")
             //alert(xhr.responseText); // Returns a 400 error the submission is rejected.          
