@@ -322,9 +322,7 @@ function formv3(){
     form.addEventListener('submit', handleForm);
     
     console.log(getCookie("hubspotutk"))
-    
-    e.preventDefault();
-  
+      
     // Create the new request 
     var xhr = new XMLHttpRequest();
     var url = 'https://api.hsforms.com/submissions/v3/integration/submit/8699964/15629fc6-9d06-464f-ab37-68ba87d445b4'
