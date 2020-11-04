@@ -13,10 +13,24 @@
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
-  
 
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+<!-- Ajax -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+ function showHide() {
+   var div = document.getElementById(hidden_div);
+   if (div.style.display == 'none') {
+     div.style.display = '';
+   }
+   else {
+     div.style.display = 'none';
+   }
+ }
+</script>
 
 <style>
     
@@ -69,16 +83,15 @@
   .cta-button {
     background-color: #618EA5;
     /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #DDE8B9, #D7B29D);
-    color: #000;
+    background-image: linear-gradient(to right, #8C65DC, #618EA5);
+    color: #FFFFFF;
     border: none;
   }
 
   .gradiant {
     background-color: #618EA5;
     /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #DDE8B9, #D7B29D);
-    color: #ffffff;
+    background-image: linear-gradient(to right, #8C65DC, #618EA5);
   }
 
   .gradiant-text {
@@ -99,13 +112,11 @@
   }
 
   .accents {
-    color: #533B4D;
+    color: #080808;
   }
 
-  .border-bottom-input {
-    border: 0; // remove default border
-    border-bottom: 1px solid #eee; // add only bottom border
-    color: red;
+  .uk-navbar-cta {
+      color: #ffffff !important;
   }
 </style>
 
@@ -121,32 +132,34 @@
 
     <nav class="uk-navbar-container nav-main" uk-navbar>
       <div class="uk-navbar-left">
-
-        <a class="uk-navbar-item uk-logo nav-main uk-main-logo" href="/testpage.html">hamarra__</a>
+        
+        <a class="uk-navbar-item uk-logo nav-main uk-main-logo" href=""><img data-src="hamarra-logo.png" width="150" height="" alt="" uk-img></a>
+<!--         <a class="uk-navbar-item uk-logo nav-main uk-main-logo" href="/testpage.html">hamarra__</a> -->
 
       </div>
 
       <div class="uk-navbar-right">
 
         <ul class="uk-iconnav uk-navbar-nav">
-          <li><button class="uk-button uk-button-default uk-button-secondary">Early Access</button></li>
+          <li><a class="uk-button uk-button-secondary uk-button-large uk-button-default uk-navbar-cta" href="#target" uk-scroll>Early Access</a></li>
         </ul>
       </div>
     </nav>
   </div>
+  
   <!-- Section 0 -->
-
-  <div class="uk-padding-remove" uk-grid uk-height-match="target: > div > .uk-card">
+  <div class="uk-padding-remove uk-margin-large-bottom" uk-grid uk-height-match="target: > div > .uk-card">
     <!-- Banner Text -->
-    <div class="uk-width-2-3@m">
+    <div class="uk-width-2-3@m uk-margin-large-bottom">
       <div class="uk-card uk-card-body uk-padding-remove">
         <div>
           <div class="uk-margin-large-top">
-            <h4 class="uk-padding-remove uk-margin-remove">a new shopping experience</h4>
-            <h1 class="uk-text-middle uk-text-light uk-heading-small uk-padding-remove-top uk-margin-remove-top uk-main-logo">new / preloved<br>cultural wear</h1>
-            <h4 class="uk-text-middle uk-text-light">Our one-stop marketplace enables designers and individuals <br>from around the world to build and shop for new and used cultural wear.</h4>
+            <!-- <h4 class="uk-padding-remove uk-margin-remove">a new shopping experience</h4> -->
+            <h1 class="uk-text-middle uk-text-light uk-heading-small uk-padding-remove-top uk-margin-remove-top uk-main-logo uk-text-bold">shop <br> new / preloved<br>cultural wear</h1>
+            <h4 class="uk-text-middle uk-text-light">Our one-stop marketplace enables designers and individuals from around the world to build and shop for new and used cultural wear.</h4>
 
-            <button href="#" class="cta-button uk-button uk-button-large uk-button-default" type="button">Get Early Access</button>
+            <a class="uk-button uk-button-primary cta-button uk-button-large uk-button-default" href="#target" uk-scroll>Get Early Access</a>
+
           </div>
           <div class="scrolling-limit uk-margin-large-top">
             <div class="scrolling">
@@ -159,12 +172,12 @@
     </div>
 
     <!-- Banner Image -->
-    <div class="uk-width-expand@m">
+    <div class="uk-width-expand@m uk-margin-large-bottom">
       <div class="uk-card uk-card-default uk-card-body uk-padding-remove uk-background-secondary"><img data-src="https://images.unsplash.com/photo-1580166905245-115d3e1d347a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" width="" height="" alt="" uk-img></div>
     </div>
   </div>
   
-  <div class="uk-margin-large-top uk-padding-large-top"><ul class="uk-iconnav uk-navbar-nav uk-hidden@s">
+<!--   <div class="uk-margin-large-top uk-padding-large-top"><ul class="uk-iconnav uk-navbar-nav uk-hidden@s">
       <li><a href="#" uk-icon="icon: instagram"></a></li>
       <li><a href="#" uk-icon="icon: twitter"></a></li>
       <li><a href="#" uk-icon="icon: facebook"></a></li>
@@ -176,15 +189,14 @@
       <li><a href="#" uk-icon="icon: twitter"></a></li>
       <li><a href="#" uk-icon="icon: facebook"></a></li>
       <li><a href="#" uk-icon="icon: mail"></a></li>
-    </ul></div>
+    </ul></div> -->
 
   <!-- Section 2 -->
-  <div class="uk-child-width-1-2@m uk-margin-large-bottom uk-margin-large-top" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true" uk-height-match="target: > div > .uk-card">
-    <div>
-
+  <div class="uk-child-width-1-2@m uk-margin-large-bottom uk-margin-large-top uk-margin-remove-left uk-margin-remove-right uk-padding-remove" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true" uk-height-match="target: > div > .uk-card">
+    <div class="uk-margin-remove uk-padding-remove">
       <!-- left card -->
-      <div class="uk-card uk-card-default uk-card-body uk-card-hover uk-padding-large" uk-parallax="background-color: white,#D7B29D,#DDE8B9,#E9F0D1; border-color: white, #D7B29D, white; viewport: 0.5" style="border: 10px solid #000;">
-        <h2 class="uk-text-bold">Buy</h2>
+      <div class="uk-light uk-card uk-card-default uk-card-body uk-card-hover uk-padding-large uk-margin-remove-left uk-margin-remove-right" uk-parallax="background-color: #1F1F1F,#080808,#080808,#1F1F1F; border-color: white, #D7B29D, white; viewport: 0.5">
+        <h2 class="uk-text-bold">Buyers</h2>
         <h4>— new</h4>
         <p class="uk-text-light">Our marketplace allows you to shop verified designers from around the world. Chat directly with designers and get the most personal shopping experience.</p>
         <br>
@@ -197,11 +209,10 @@
         <p class="uk-text-light">We know how hard it is to get the sizing right. Our streamlined universal sizing helps you get the best fit, stress-free.</p>
       </div>
     </div>
-
     <!-- right card -->
-    <div>
-      <div class="uk-card uk-card-default uk-card-body uk-card-hover uk-padding-large" uk-parallax="background-color: white,radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); border-color: white,#D7B29D,#E8D2AE,white; viewport: 0.5" style="border: 10px solid #000;">
-        <h2 class="uk-text-bold">Sell</h2>
+    <div class="uk-margin-remove uk-padding-remove">
+     <div class="uk-card uk-card-default uk-card-body uk-card-hover uk-padding-large uk-margin-remove-left uk-margin-remove-right" uk-parallax="background-color: #FEFEFE,#FFFFFF,#FFFFFF,#FEFEFE; border-color: white, #D7B29D, white; viewport: 1">
+        <h2 class="uk-text-bold">Sellers</h2>
         <h4>— as a designer</h4>
         <p class="uk-text-light">Publish your collections on our platform and access a global clientele as a verified seller. Seamless transactions, communication and payouts allow you to grow your brand and provide an intimate selling experience. </p>
         <br>
@@ -217,7 +228,7 @@
   </div>
 
   <!-- CTA -->
-  <div class="uk-section gradiant uk-padding uk-margin-large-bottom uk-animation-bottom-small">
+  <div class="uk-section gradiant uk-padding uk-margin-large-bottom uk-animation-bottom-small uk-light" id="target">
     <div class="uk-container">
 
       <div class="uk-panel uk-light uk-margin-medium">
@@ -230,20 +241,23 @@
           </div>
         </div>
         <div>
+        <div id="hidden_div" style="display:none">
+            <p>Show me when form is submitted :) </p>
+        </div>
           <div class="uk-card uk-card-body">
             <h3 class="uk-text-emphasis">join our <br>early access beta list</h3>
-            <form>
+            <form onsubmit="showHide(); return false;">
 
               <div class="uk-margin">
-                <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="First Name" id="firstname">
+                <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="First Name" id="firstname" required>
               </div>
               <div class="uk-margin">
-                <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line border-bottom-input" type="text" placeholder="Last Name" id="lastname">
+                <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line border-bottom-input" type="text" placeholder="Last Name" id="lastname" required>
               </div>
               <div class="uk-margin">
-                <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="Email" id="email">
+                <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="Email" id="email" required>
               </div>
-              <button class="uk-button uk-button-default uk-button-secondary uk-button-large uk-width-1-2" onclick="formv3()">Go</button>
+              <button class="uk-button uk-button-default uk-button-secondary uk-button-large uk-width-1-2" onclick="formv3()" type="submit" name="submit">Go</button>
 
             </form>
           </div>
@@ -304,7 +318,6 @@
 </nav>
 
 <script>
-
 
 window.getCookie = function(name) {
   var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -367,3 +380,4 @@ function formv3(){
 </script>
 
 </html>
+
