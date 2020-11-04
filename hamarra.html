@@ -234,7 +234,7 @@
         </div>
           <div class="uk-card uk-card-body" id="first" style="display:">
             <h3 class="uk-text-emphasis">join our <br>early access beta list</h3>
-            <form onsubmit="formv3(); return false;" id="myForm">
+            <form onsubmit="formv3(); return false;" id="myform">
 
               <div class="uk-margin">
                 <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="First Name" id="firstname" required>
@@ -249,7 +249,7 @@
 
             </form>
           </div>
-          <div class="uk-card uk-card-body" id="hidden_div">
+          <div class="uk-card uk-card-body" id="hidden_div" style="display:none">
             <h3 class="uk-text-emphasis">thanks for signing up!</h3>
           </div>
         </div>
@@ -314,12 +314,22 @@ window.getCookie = function(name) {
   var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
   if (match) return match[2];
 }
+    
+ function showHide() {
+   var div = document.getElementById(hidden_div);
+   if (div.style.display == 'none') {
+     div.style.display = '';
+   }
+   else {
+     div.style.display = 'none';
+   }
+ }
 
 function formv3(){
     
-    var form = document.getElementById("myForm");
-    function handleForm(event) { event.preventDefault(); } 
-    form.addEventListener('submit', handleForm);
+//     var form = document.getElementById("myForm");
+//     function handleForm(event) { event.preventDefault(); } 
+//     form.addEventListener('submit', handleForm);
     
     console.log(getCookie("hubspotutk"))
       
@@ -371,7 +381,8 @@ function formv3(){
     // Sends the request 
     
     xhr.send(final_data)
-      
+    
+    showHide()
  }
 </script>
 
