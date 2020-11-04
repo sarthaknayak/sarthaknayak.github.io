@@ -234,7 +234,7 @@
         </div>
           <div class="uk-card uk-card-body" id="first" style="display:">
             <h3 class="uk-text-emphasis">join our <br>early access beta list</h3>
-            <form onsubmit="formv3()" id="myForm">
+            <form onsubmit="myFunction()" id="myForm">
 
               <div class="uk-margin">
                 <input class="uk-input uk-form-width-large uk-form-large uk-form-input-line" type="text" placeholder="First Name" id="firstname" required>
@@ -315,8 +315,12 @@ window.getCookie = function(name) {
   if (match) return match[2];
 }
 
-function formv3(){
+//     function formv3()
+myFunction = function(e){
+    
     console.log(getCookie("hubspotutk"))
+    
+    e.preventDefault();
   
     // Create the new request 
     var xhr = new XMLHttpRequest();
