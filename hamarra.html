@@ -120,7 +120,7 @@
     <nav class="uk-navbar-container nav-main" uk-navbar>
       <div class="uk-navbar-left">
         
-        <a class="uk-navbar-item uk-logo nav-main uk-main-logo" href=""><img data-src="hamarra-logo.png" width="150" height="" alt="" uk-img></a>
+        <a class="uk-navbar-item uk-logo nav-main uk-main-logo uk-animation-fade" href=""><img data-src="hamarra-logo.png" width="150" height="" alt="" uk-img></a>
 <!--         <a class="uk-navbar-item uk-logo nav-main uk-main-logo" href="/testpage.html">hamarra__</a> -->
 
       </div>
@@ -128,7 +128,7 @@
       <div class="uk-navbar-right">
 
         <ul class="uk-iconnav uk-navbar-nav">
-          <li><a class="uk-button uk-button-secondary uk-button-large uk-button-default uk-navbar-cta" href="#target" uk-scroll>Early Access</a></li>
+          <li><a class="uk-button uk-button-secondary uk-button-large uk-button-default uk-navbar-cta uk-animation-fade" href="#target" uk-scroll>Early Access</a></li>
         </ul>
       </div>
     </nav>
@@ -140,7 +140,7 @@
     <div class="uk-width-2-3@m uk-margin-large-bottom">
       <div class="uk-card uk-card-body uk-padding-remove">
         <div>
-          <div class="uk-margin-large-top">
+          <div class="uk-margin-large-top uk-animation-fade">
             <!-- <h4 class="uk-padding-remove uk-margin-remove">a new shopping experience</h4> -->
             <h1 class="uk-text-middle uk-text-light uk-heading-small uk-padding-remove-top uk-margin-remove-top uk-main-logo uk-text-bold">shop <br> new / preloved<br>cultural wear</h1>
             <h4 class="uk-text-middle uk-text-light">Our one-stop marketplace enables designers and individuals from around the world to build and shop for new and used cultural wear.</h4>
@@ -148,7 +148,7 @@
             <a class="uk-button uk-button-primary cta-button uk-button-large uk-button-default" href="#target" uk-scroll>Get Early Access</a>
 
           </div>
-          <div class="scrolling-limit uk-margin-large-top">
+          <div class="scrolling-limit uk-margin-large-top uk-animation-fade">
             <div class="scrolling">
               <p class="tab4 accents">saris<span class="tab"></span>kurtas<span class="tab"></span>bridal<span class="tab"></span>wedding<span class="tab"></span>party<span class="tab"></span>eid<span class="tab"></span>diwali<span class="tab"></span>vaisakhi<span class="tab"></span>indian<span class="tab"></span>pakistani<span class="tab"></span>nigerian<span class="tab"></span> kente<span class="tab"></span>eid<span class="tab"></span>diwali<span class="tab"></span>vaisakhi<span class="tab"></span>indian<span class="tab"></span>saris<span class="tab"></span>kurtas<span class="tab"></span>bridal<span class="tab"></span>wedding party<span class="tab"></span>eid<span class="tab"></span>diwali<span class="tab"></span>vaisakhi<span class="tab"></span>indian<span class="tab"></span>pakistani<span class="tab"></span>nigerian<span class="tab"></span>kente eid></p>
             </div>
@@ -160,7 +160,7 @@
 
     <!-- Banner Image -->
     <div class="uk-width-expand@m uk-margin-large-bottom">
-      <div class="uk-card uk-card-default uk-card-body uk-padding-remove uk-background-secondary"><img data-src="https://images.unsplash.com/photo-1580166905245-115d3e1d347a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" width="" height="" alt="" uk-img></div>
+      <div class="uk-card uk-card-default uk-card-body uk-padding-remove uk-background-secondary uk-animation-slide-bottom-small"><img data-src="https://images.unsplash.com/photo-1580166905245-115d3e1d347a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" width="" height="" alt="" uk-img></div>
     </div>
   </div>
   
@@ -215,7 +215,7 @@
   </div>
   
   <!-- CTA Main -->
-  <div class="uk-section gradiant uk-padding uk-margin-large-bottom uk-animation-bottom-small uk-light" id="target">
+  <div class="uk-section gradiant uk-padding uk-margin-large-bottom uk-animation-bottom-small uk-light" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true" id="target">
     <div class="uk-container">
 
       <div class="uk-panel uk-light uk-margin-medium">
@@ -228,7 +228,7 @@
             <p class="uk-text-emphasis">Subscribe to stay up to date on our launch and get early access to our Beta Program. You’ll receive exclusive founding member perks and first dibs on SWAG! We promise never to spam your inbox or share your information.</p>
           </div>
             <!-- Share -->
-          <div class="uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle" style="display:none" id="share-social">
+          <div class="uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle uk-animation-fade" style="display:none" id="share-social">
             <h2 class="uk-text-emphasis">Share the love!</h2>
                 <p>Know someone that might be interested? <a class="uk-link-text" href="mailto:?subject=Check%20this%20out!%20?body=I%20just%20signed%20up%20for%20early%20access%20to%20Hamarra.%20I%20think%20you'll%20like%20it%20too%20-%20hamarra.com"> Tell them to join the party <span uk-icon="forward"></span></a></p>
           </div>
@@ -253,7 +253,7 @@
           </div>
           
           <!-- hidden div -->
-          <div class="uk-card uk-card-body" id="form-confirm" style="display:none">
+          <div class="uk-card uk-card-body uk-animation-fade" id="form-confirm" style="display:none">
             <div>
                 <h3 class="uk-text-emphasis">You're on our list!</h3>
                 <p>Thanks for signing up. Our team will reach out to you when your access to our Beta is ready!</p>
