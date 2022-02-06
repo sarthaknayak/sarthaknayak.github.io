@@ -10,9 +10,13 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@font-face { font-family: Eina; src: url('Eina03-Regular.otf'); } 
+@font-face { font-family: Eina; font-weight: bold; src: url('Eina03-SemiBold.otf');}
+
 html {
     font-size: 1em;
     line-height: 1.4;
+    font-family: Eina !important;
 }
 
 .fullheight {
