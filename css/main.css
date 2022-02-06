@@ -16,8 +16,38 @@ html {
     line-height: 1.4;
 }
 
+.fullheight {
+  height: 100vh;
+}
+
+.seventyheight {
+  height: 70vh;
+}
+
+.halfheight {
+  height: 50vh;
+}
+
+.background-black {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.blue-tech {
+  color: #0038ff !important;
+}
+
+.red-tech {
+  color: #ff2f54 !important;
+}
+
+.black-text {
+  color: #080808 !important;
+}
+
 body {
-  height: 100%;
+  background: linear-gradient(90deg, #0000 calc(100% - 0.5px), #272727 0);
+  background-size: calc((100% - 0 * 0.5px) / 4 + 0.5px) 100%;
 }
 
 a {
