@@ -22,255 +22,160 @@
         <script src="https://kit.fontawesome.com/2217d9cde2.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
-    <body class="uk-padding uk-background-muted">
+    <body class="uk-padding uk-light background-black">
+      <!-- Nav -->
+      <nav class="uk-navbar-container uk-margin uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-navbar-transparent" uk-navbar="mode: click">
+        <div class="uk-navbar-left uk-animation-slide-top-small">
+          <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Sarthak Nayak</a></li>
+          </ul>
+        </div>
+        <div class="uk-navbar-right uk-animation-slide-top-small">
+          <ul class="uk-navbar-nav">
+            <li><a href="mailto:sarnayak22@gmail.com" target="_blank" uk-icon="icon: mail"></a></li>
+            <li><a href="https://www.linkedin.com/in/sarthaknayak22/" target="_blank" uk-icon="icon: linkedin"></a></li>
+          </ul>
+        </div>
+      </nav>
 
-        <!-- Add your site or application content here -->
+      <!-- Landing -->
+      <div class="uk-child-width-1-2@s" uk-grid>
+        <!-- Tech -->
+        <div>
+          <div class="uk-card uk-card-large uk-card-body uk-flex uk-flex-middle seventyheight uk-animation-fade">
+            <!-- Tech Heading -->
+            <h1 class="uk-heading-2xlarge uk-padding-small blue-tech">Tech</h1>
+            <a style="color: #0038FF" href="#experience">View Work</a>
+          </div>
+
+          <!-- Tech Skills -->
+          <div class="uk-flex uk-flex-center uk-animation-slide-bottom-small">
+            <div class="uk-card uk-card-body">Software Engineering</div>
+            <div class="uk-card uk-card-body uk-margin-left">Product Design</div>
+          </div>
+        </div>
+        <!-- Art -->
+        <div>
+          <div class="uk-card uk-card-large uk-card-body uk-flex uk-flex-middle seventyheight uk-animation-fade">
+            <!-- Art Heading -->
+            <h1 class="uk-heading-2xlarge uk-padding-small red-tech">Art</h1>
+            <a style="color: #FF2F54" href="/art.html">View Work</a>
+          </div>
+          <!-- Art Skills -->
+          <div class="uk-flex uk-flex-center uk-animation-slide-bottom-small">
+            <div class="uk-card uk-card-body">Photography</div>
+            <div class="uk-card uk-card-body uk-margin-left">Videography</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Me -->
+      <div class="uk-child-width-1-2@s uk-padding-large" uk-grid uk-height-match="target: > div > .uk-card">
+        <div>
+          <div class="uk-card uk-padding-large uk-animation-fade">
+            <img src="https://images.unsplash.com/photo-1626978407649-de62156f1548?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="">
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body uk-padding-large uk-animation-fade">
+            <small>Based In New York City</small>
+            <br><br><br><br>
+            <p>
+              I spend my days designing and building web applications. I specialize in FinTech and SaaS software in the financial industry.
+              <br><br>
+              My nights are spent hunting to satisfy my creative cravings. I am currently working on a clothing brand that dissolves timeless classics into a streetwear aesthetic.
+            </p><br><br>
+            <p><b>Favorite Books</b><br> Zero to One (Peter Thiel), Lean Startup (Eric Ries), Shoe Dog (Phil Knight), Creative Selection (Ken Kocienda), The Alchemist (Paulo Coelho)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Where I've Worked  -->
+
+      <div class="uk-flex uk-flex-center uk-padding uk-animation-fade">
+        <div class="uk-card uk-card-body uk-margin-left uk-dark" id="experience">
+          <h1 class="uk-heading-large">My <br> Experience
+          </h1>
+          <span class="uk-label">Java</span>
+          <span class="uk-label">Python</span>
+          <span class="uk-label">Apache Kafka</span>
+          <span class="uk-label">Apache Flink</span>
+          <span class="uk-label">MongoDB</span>
+          <span class="uk-label">PostgreSQL</span>
+          <span class="uk-label">MySQL</span>
+          <span class="uk-label">AWS</span>
+          <span class="uk-label">Azure</span>
+          <span class="uk-label">Sketch</span>
+          <span class="uk-label">Flask</span>
+          <span class="uk-label">Django</span>
+          <span class="uk-label">React</span>
+          <span class="uk-label">Figma</span>
+          <span class="uk-label">Html/CSS</span>
+          <span class="uk-label">Unqork</span>
+          <span class="uk-label">Salesforce</span>
+          <span class="uk-label">Hubspot</span>
+          <p class="uk-padding-large uk-padding-remove-bottom uk-text-large">Some brands & companies I've worked at,
+            either directly or via contract/firm.</p>
+        </div>
+      </div>
+
+      <div class="uk-flex-center uk-background-default uk-padding uk-animation-fade">
+        <div class="uk-text-center uk-child-width-1-3 uk-flex-center" uk-grid>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img class="" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img class="" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+          <div>
+            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img class="" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png" width="80" height="" alt="" uk-img></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="uk-flex uk-flex-center uk-animation-fade">
+        <div class="halfheight uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle">
+          <h1 class="uk-heading-large">Let's talk<br><a href="mailto:sarnayak22@gmail.com" target="_blank">sarnayak22@gmail.com</a>
+          </h1>
+        </div>
+
+      </div>
+
+      <div class="uk-flex uk-flex-center uk-animation-slide-bottom-small">
+        <div class="uk-card uk-card-body"><a href="https://www.linkedin.com/in/sarthaknayak22/" target="_blank" class="uk-icon-link" uk-icon="linkedin"></a>
+        </div>
+        <div class="uk-card uk-card-body"><a href="https://www.youtube.com/channel/UCelyoMiawNF68AriqByazOw" target="_blank" class="uk-icon-link" uk-icon="youtube"></a>
+        </div>
+        <div class="uk-card uk-card-body"><a class="uk-text-warning fab fa-spotify" target="_blank" href="https://open.spotify.com/user/12146636465?si=JoRLRehtSdKSH6iUtEXqQg"></a>
+        </div>
+        <div class="uk-card uk-card-body"><a href="mailto:sarnayak22@gmail.com" target="_blank" class="uk-icon-link" uk-icon="mail"></a>
+        </div>
+      </div>
+
+      <p class="uk-padding-small uk-text-meta uk-text-light uk-text-center uk-animation-fade uk-animation-slide-bottom-small uk-animation-slide-bottom-small">Sarthak Nayak © 2022 All Rights Reserved.</p>
         
-        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-          <nav class="uk-navbar-container uk-animation-fade" uk-navbar style="position: relative; z-index: 980;">
-            <div class="uk-navbar-left">
-              <ul class="uk-navbar-nav">
-                <li class="uk-active"><a class="uk-text-warning" href="/">Sarthak Nayak</a></li>
-              </ul>
-            </div>
-
-            <div class="uk-navbar-right">
-              <ul class="uk-iconnav">
-                <li class="uk-margin-large-right uk-margin-small-bottom uk-margin-small-top"><a class="uk-text-warning" target="_blank" href="https://www.linkedin.com/in/sarthaknayak22/" uk-icon="icon: linkedin"></a></li>
-                <li class="uk-margin-large-right uk-margin-small-bottom uk-margin-small-top"><a class="uk-text-warning" target="_blank" href="https://twitter.com/nayaks22" uk-icon="icon: twitter"></a></li>
-                <li class="uk-margin-large-right uk-margin-small-bottom uk-margin-small-top"><a class="uk-text-warning fab fa-spotify" target="_blank" href="https://open.spotify.com/user/12146636465?si=JoRLRehtSdKSH6iUtEXqQg"></a></li>
-                <li class="uk-margin-large-right uk-margin-small-bottom uk-margin-small-top"><a class="uk-text-warning" target="_blank" href="mailto:nayaks22@gmail.com" uk-icon="icon: google"></a></li>
-              </ul>
-            </div>
-          </nav>
-      </div>
-
-      <div class="uk-section">
-        <div class="uk-container">
-          <div class="uk-grid-match uk-child-width-1-2@m uk-padding-large container py-5" uk-grid>
-            <div class="uk-height-medium output uk-padding-large uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right" id="output">
-              <h1 class="uk-text-primary uk-text-lighter uk-heading-small cursor uk-animation-fade">
-              </h1>
-            </div>
-            <div>
-              <p class="uk-dropcap uk-text-light uk-text-primary uk-animation-fade">Hello world, I'm a full stack engineer based in NYC/NJ. I've worked on many marketplace and SaaS applications. I love working on product teams where designers and
-                engineers closely work together to solve complex problems with beautiful and intuitive software. I've been part of startups sprinting to bring MVP products to market, global organizations looking to take their tech to the next level, and
-                more. In a past life, I was the founder and creative director of a menswear brand, but I gave it all up to write code 🤓😎.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="" uk-grid>
-
-        <!-- Main Bio Card -->
-        <div class="uk-width-1-3@m">
-          <div class="uk-card uk-card-body">
-
-            <!-- Education Card -->
-            <div class="">
-              <h3 class="uk-text-light uk-animation-fade">Education</h3>
-              <!-- Education 1 -->
-              <div class="uk-grid-small uk-flex-middle uk-animation-fade uk-animation-slide-bottom-small" uk-grid>
-                <div class="uk-width-auto">
-                  <img class="uk-border-circle" width="40" height="40" src="/img/nyit-college-logo.png">
-                </div>
-                <div class="uk-width-expand">
-                  <h3 class="uk-text-small uk-margin-remove-bottom">MS Computer Science</h3>
-                  <p class="uk-text-meta uk-margin-remove-top uk-text-light">New York Institute of Technology</p>
-                </div>
-              </div>
-
-              <!-- Education 2 -->
-              <div class="uk-grid-small uk-flex-middle uk-animation-fade uk-animation-slide-bottom-small" uk-grid>
-                <div class="uk-width-auto">
-                  <img class="uk-border-circle" width="40" height="40" src="/img/baruch-college-logo.jpg">
-                </div>
-                <div class="uk-width-expand">
-                  <h3 class="uk-text-small uk-margin-remove-bottom">BBA Computer Science & Finance</h3>
-                  <p class="uk-text-meta uk-margin-remove-top uk-text-light">Baruch College</p>
-                </div>
-              </div>
-
-              <!-- End of Education Card -->
-            </div>
-            <!-- End of Intro Card -->
-          </div>
-        </div>
-
-        <!-- Projects and Experience body block -->
-        <div class="uk-width-expand@m">
-          <div class="uk-card uk-card-body">
-
-            <!-- Projects and Experience body block -->
-            <div class="">
-              <h3 class="uk-text-light uk-animation-fade">Projects & Experience</h3>
-            </div>
-            <!-- Projects Cards -->
-
-            <div class="uk-child-width-1-1@m uk-padding-remove-left uk-margin-remove uk-align-center" uk-grid>
-
-              <!-- Card 1 -->
-              <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light uk-width-1-1@m uk-animation-fade uk-animation-slide-bottom-small">
-                <h3 class="uk-text-lighter uk-margin-remove-bottom	">LawTrades</h3>
-                <p class="uk-text-meta uk-margin-remove-top">Software Engineer</p>
-                <p class="uk-text-light">A VC backed SaaS marketplace on a mission to build an open legal system. During my time here, I helped build a web application used by lawyers/law firms as their primary CRM and helped clients find and solve their
-                  complex legal projects. I also built custom enterprise grade solutions that tackled unique B2B and B2C problems.</p>
-                <span class="uk-label">Python</span>
-                <span class="uk-label">SQL</span>
-                <span class="uk-label">AWS</span>
-                <span class="uk-label">Node.JS</span>
-                <span class="uk-label">Javascript</span>
-                <span class="uk-label">Sketch</span>
-                <span class="uk-label">Html</span>
-                <span class="uk-label">CSS</span>
-                <span class="uk-label">Salesforce</span>
-                <span class="uk-label">Hubspot</span>
-
-              </div>
-
-              <!-- Card 2 -->
-              <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light uk-width-1-1@m uk-animation-fade uk-animation-slide-bottom-small">
-                <h3 class="uk-text-lighter uk-margin-remove-bottom">United Nations</h3>
-                <p class="uk-text-meta uk-margin-remove-top">Database Engineer</p>
-                <p class="uk-text-light">At the United Nations, I spent my time working with their Global Movement Control team in charge of planning and executing peacekeeping troop and cargo movements in conflict zones. Here, I built a secure platform
-                  using a python and django framework hosted on a cloud server that's still used by the team today. The program helps their officers plan and manage movements in over 10 ongoing peacekeeping missions.</p>
-                <span class="uk-label">Python</span>
-                <span class="uk-label">mySQL</span>
-                <span class="uk-label">AWS</span>
-                <span class="uk-label">Javascript</span>
-                <span class="uk-label">Java</span>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light uk-width-1-1@m uk-animation-fade uk-animation-slide-bottom-small">
-                <h3 class="uk-text-lighter uk-margin-remove-bottom">InnZen</h3>
-                <p class="uk-text-meta uk-margin-remove-top">Consulting Project</p>
-                <p class="uk-text-light">InnZen is a hospitality and commercial real estate investment firm. Here, I helped the company's investment team source and analyze alternative & traditional data using python’s web scraping, analysis and ML
-                  libraries to find and assess new investment opportunities - helping the company make data driven decisions..</p>
-                <span class="uk-label">Python</span>
-                <span class="uk-label">Flask</span>
-                <span class="uk-label">BeautifulSoup</span>
-                <span class="uk-label">Numpy</span>
-                <span class="uk-label">Javascript</span>
-                <span class="uk-label">HTML</span>
-                <span class="uk-label">CSS</span>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light uk-width-1-1@m uk-animation-fade uk-animation-slide-bottom-small">
-                <h3 class="uk-text-lighter uk-margin-remove-bottom">Vogue Group</h3>
-                <p class="uk-text-meta uk-margin-remove-top">Full Stack Engineer</p>
-                <p class="uk-text-light">A textile company where I got my first taste of startup tech! The company specializes in wholesale and retail textile sales through their e-commerce platform. During my time here, I helped the company build their
-                  first wholesale inventory management software. I also helped build the company’s e-commerce platform which serves their retail customers.</p>
-                <span class="uk-label">Python</span>
-                <span class="uk-label">Shopify</span>
-                <span class="uk-label">Mailchimp</span>
-                <span class="uk-label">Shipstation</span>
-                <span class="uk-label">HTML</span>
-                <span class="uk-label">CSS</span>
-                <span class="uk-label">Javascript</span>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div>
-  <p class="uk-padding-small uk-text-meta uk-text-light uk-align-center uk-animation-fade uk-animation-slide-bottom-small">Sarthak Nayak © 2019 All Rights Reserved.</p>
-</div>
       
          <!-- end of site content -->
-      <script>
-        // values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
-var i = 0,
-    a = 0,
-    isBackspacing = false,
-    isParagraph = false;
-
-// Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
-var textArray = [
-  "I'm a software engineer", 
-  "I like building web apps", 
-  "I can speak 4 languages",
-  "I like wireframing on the Sketch app",
-  "I'm a self proclaimed fantasy football expert",
-  "I love using the Jupyter Notebook",
-];
-
-// Speed (in milliseconds) of typing.
-var speedForward = 100, //Typing Speed
-    speedWait = 1000, // Wait between typing and backspacing
-    speedBetweenLines = 1000, //Wait between first and second lines
-    speedBackspace = 25; //Backspace Speed
-
-//Run the loop
-typeWriter("output", textArray);
-
-function typeWriter(id, ar) {
-  var element = $("#" + id),
-      aString = ar[a],
-      eHeader = element.children("h1"), //Header element
-      eParagraph = element.children("p"); //Subheader element
-  
-  // Determine if animation should be typing or backspacing
-  if (!isBackspacing) {
-    
-    // If full string hasn't yet been typed out, continue typing
-    if (i < aString.length) {
-        
-      // If character isn't a pipe, continue typing.
-        // Type header or subheader depending on whether pipe has been detected
-        if (!isParagraph) {
-          eHeader.text(eHeader.text() + aString.charAt(i));
-        } else {
-          eParagraph.text(eParagraph.text() + aString.charAt(i));
-        }
-        i++;
-        setTimeout(function(){ typeWriter(id, ar); }, speedForward);
-      
-    // If full string has been typed, switch to backspace mode.
-    } else if (i == aString.length) {
-      
-      isBackspacing = true;
-      setTimeout(function(){ typeWriter(id, ar); }, speedWait);
-      
-    }
-    
-  // If backspacing is enabled
-  } else {
-    
-    // If either the header or the paragraph still has text, continue backspacing
-    if (eHeader.text().length > 0 || eParagraph.text().length > 0) {
-      
-      // If paragraph still has text, continue erasing, otherwise switch to the header.
-      if (eParagraph.text().length > 0) {
-        eParagraph.text(eParagraph.text().substring(0, eParagraph.text().length - 1));
-      } else if (eHeader.text().length > 0) {
-        eParagraph.removeClass("cursor");
-        eHeader.addClass("cursor");
-        eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
-      }
-      setTimeout(function(){ typeWriter(id, ar); }, speedBackspace);
-    
-    // If neither head or paragraph still has text, switch to next quote in array and start typing.
-    } else { 
-      
-      isBackspacing = false;
-      i = 0;
-      isParagraph = false;
-      a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
-      setTimeout(function(){ typeWriter(id, ar); }, 50);
-      
-    }
-  }
-}
-      
-      </script>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
