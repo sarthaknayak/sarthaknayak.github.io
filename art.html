@@ -40,47 +40,88 @@
 
   <!-- Body Header   -->
   <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle uk-animation-fade">Pictures I've taken, clothing I’ve designed</div>
+        
+  
 
   <!-- Images -->
-  <div class="uk-padding uk-animation-fade">
-    <img src="/img/photos/DSC00984.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC01017.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img src="/img/photos/DSC00997.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC00960.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC01080.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC00174.jpg" width="60%" height="" alt="" class="uk-align-center" uk-img>
-  </div>
+  <div uk-filter="target: .js-filter">
+    <ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center">
+      <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+      <li uk-filter-control="[data-color='maui']"><a href="#">Maui</a></li>
+      <li uk-filter-control="[data-color='kvchi']"><a href="#">Kvchi</a></li>
+    </ul>
+
+    <ul class="js-filter uk-child-width-1-1 uk-text-center" uk-grid>
+   
+      <!-- MAUI -->
+      <li data-color="maui">
+        <div class="uk-padding uk-animation-fade">
+          <img src="/img/photos/DSC00984.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="maui">
+        <div class="uk-padding uk-animation-fade">
+          <img src="/img/photos/DSC01017.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="maui">
+        <div class="uk-padding uk-animation-fade">
+          <img src="/img/photos/DSC00997.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="maui">
+        <div class="uk-padding uk-animation-fade">
+          <img src="/img/photos/DSC00960.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="maui">
+        <div class="uk-padding uk-animation-fade">
+          <img src="/img/photos/DSC01080.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="maui">
+        <div class="uk-padding uk-animation-fade">
+          <img src="/img/photos/DSC00174.jpg" width="60%" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
         
-  <div class="uk-padding uk-animation-fade">
-    <img src="/img/photos/DSC09969.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC09979.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img src="/img/photos/DSC09939.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC_0800.jpg" width="60%" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC05376.JPG" width="60%" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC05304.JPG" width="" height="" alt="" class="uk-align-center" uk-img>
-  </div>
-  <div class="uk-padding uk-animation-fade">
-    <img data-src="/img/photos/DSC_0800.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+      <!-- KVCHI -->
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC09969.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC09979.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC09939.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC_0800.jpg" width="60%" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC05376.JPG" width="60%" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC05304.JPG" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+      <li data-color="kvchi">
+        <div class="uk-padding uk-animation-fade">
+          <img data-src="/img/photos/DSC_0800.jpg" width="" height="" alt="" class="uk-align-center" uk-img>
+        </div>
+      </li>
+    </ul>
   </div>
 
   <!-- Footer -->
