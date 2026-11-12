@@ -1,187 +1,60 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <title>Sarthak Nayak</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="css/uikit.min.css" />
-
-        <!-- UIkit JS -->
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
-        <script src="https://kit.fontawesome.com/2217d9cde2.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </head>
-    <body class="uk-padding uk-light background-black">
-      <!-- Nav -->
-      <nav class="uk-navbar-container uk-margin uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-navbar-transparent" uk-navbar="mode: click">
-        <div class="uk-navbar-left uk-animation-slide-top-small">
-          <ul class="uk-navbar-nav">    
-            <li class="uk-active"><a href="/">Sarthak Nayak</a></li>
-          </ul>
-        </div>
-        <div class="uk-navbar-right uk-animation-slide-top-small">
-          <ul class="uk-navbar-nav">
-            <li><a href="mailto:sarnayak22@gmail.com" target="_blank" uk-icon="icon: mail"></a></li>
-            <li><a href="https://www.linkedin.com/in/sarthaknayak22/" target="_blank" uk-icon="icon: linkedin"></a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- Landing -->
-      <div class="uk-child-width-1-2@s" uk-grid>
-        <!-- Tech -->
-        <div>
-          <div class="uk-card uk-card-large uk-card-body uk-flex uk-flex-middle seventyheight uk-animation-fade">
-            <!-- Tech Heading -->
-              <h1 class="uk-heading-2xlarge uk-padding-small blue-tech"><b>Tech</b></h1>
-            <a style="color: #0038FF" href="#experience">View Work</a>
-          </div>
-
-          <!-- Tech Skills -->
-          <div class="uk-flex uk-flex-center uk-animation-slide-bottom-small">
-            <div class="uk-card uk-card-body">Software Engineering</div>
-            <div class="uk-card uk-card-body uk-margin-left">Product Design</div>
-          </div>
-        </div>
-        <!-- Art -->
-        <div>
-          <div class="uk-card uk-card-large uk-card-body uk-flex uk-flex-middle seventyheight uk-animation-fade">
-            <!-- Art Heading -->
-              <h1 class="uk-heading-2xlarge uk-padding-small red-tech"><b>Art</b></h1>
-            <a style="color: #FF2F54" href="/art">View Work</a>
-          </div>
-          <!-- Art Skills -->
-          <div class="uk-flex uk-flex-center uk-animation-slide-bottom-small">
-            <div class="uk-card uk-card-body">Photography</div>
-            <div class="uk-card uk-card-body uk-margin-left">Videography</div>
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f2f3f5">
+  <meta name="description" content="Sarthak Nayak — Applied AI Engineering at OpenAI.">
+  <title>Sarthak Nayak</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23e9ebef'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%232b45ee'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css?v=13">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js"}}</script>
+</head>
+<body>
+  <main>
+    <div id="stage" tabindex="0" role="group" aria-label="Marble tray. Guide the marble into the blue pocket. Move the pointer, drag, or use arrow keys or WASD to tilt. R resets.">
+      <canvas id="scene" aria-label="Interactive three-dimensional marble tray"></canvas>
+  <header class="identity" id="tray-profile">
+    <h1 id="profile-name">Sarthak Nayak</h1>
+    <p id="profile-company">Applied AI Engineering at OpenAI</p>
+    <nav aria-label="Social links"><a id="linkedin" href="https://www.linkedin.com/in/sarthaknayak22/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn <span aria-hidden="true">↗</span></a></nav>
+    <span id="sample-label" class="sample-label" hidden>Sample profile</span>
+  </header>
+      <div id="loading" class="loading">Finding our balance<span>…</span></div>
+      <div id="render-error" class="render-error" hidden><p>This little experiment needs 3D graphics.</p><p>Try opening it in a browser with WebGL enabled.</p></div>
+    </div>
+  </main>
+  <dialog id="results" class="results" aria-labelledby="result-heading" aria-describedby="result-time">
+    <div class="result-sheet">
+      <h2 id="result-heading" class="sr-only"></h2>
+      <p id="result-time" class="result-time"></p>
+      <section class="scoreboard" aria-labelledby="board-title">
+        <h3 id="board-title">Best times</h3>
+        <ol id="result-scores" aria-label="Personal leaderboard"></ol>
+      </section>
+      <div class="result-actions"><button id="again">One more</button><button id="next">Next level</button></div>
+      <p id="record-scope" class="record-scope"></p>
+    </div>
+  </dialog>
+  <footer id="game-controls" hidden>
+    <div class="run-stats"><span id="timer" hidden>00:00.0</span><span id="best" hidden></span></div>
+    <button id="reset" class="reset" aria-label="Reset the marble tray" title="Reset (R)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 2 7M4 4v6h6"/></svg></button>
+    <div class="controls">
+      <div id="input-options" class="input-options">
+        <button id="hands-toggle" class="hands-toggle" aria-pressed="false" aria-controls="camera-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5-7a1.5 1.5 0 0 1 3 0v7-5a1.5 1.5 0 0 1 3 0v6-3a1.5 1.5 0 0 1 3 0v6c0 4-2 7-6 7h-1c-3 0-4-2-6-4l-3-4c-1-2 1-3 2-2l2 2"/></svg><span id="hands-label">Use your hands</span><span class="camera-tag">camera</span></button>
+        <button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-controls="motion-tools" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-12 12 12)"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18h4"/></g></svg><span id="motion-label">Tilt your phone</span></button>
       </div>
-
-      <!-- About Me -->
-      <div class="uk-child-width-1-2@s uk-padding-large" uk-grid uk-height-match="target: > div > .uk-card">
-        <div>
-          <div class="uk-card uk-padding-large uk-animation-fade">
-            <img src="/img/DSC01226.jpg" alt="">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-body uk-padding-large uk-animation-fade">
-            <small>Based In New York City</small>
-            <br><br><br><br>
-            <p>
-              I spend my days designing and building web applications. I specialize in FinTech and SaaS software in the financial industry.
-              <br><br>
-              My nights are spent hunting to satisfy my creative cravings. I am currently working on a clothing brand that dissolves timeless classics into a streetwear aesthetic.
-            </p><br><br>
-            <p><b>Favorite Books</b><br> Zero to One (Peter Thiel), Lean Startup (Eric Ries), Shoe Dog (Phil Knight), Creative Selection (Ken Kocienda), The Alchemist (Paulo Coelho)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Where I've Worked  -->
-
-      <div class="uk-flex uk-flex-center uk-padding uk-animation-fade">
-        <div class="uk-card uk-card-body uk-margin-left uk-dark" id="experience">
-            <h1 class="uk-heading-large"><b>My <br> Experience</b>
-          </h1>
-          <span class="uk-label">Java</span>
-          <span class="uk-label">Python</span>
-          <span class="uk-label">Apache Kafka</span>
-          <span class="uk-label">Apache Flink</span>
-          <span class="uk-label">MongoDB</span>
-          <span class="uk-label">PostgreSQL</span>
-          <span class="uk-label">MySQL</span>
-          <span class="uk-label">AWS</span>
-          <span class="uk-label">Azure</span>
-          <span class="uk-label">Sketch</span>
-          <span class="uk-label">Flask</span>
-          <span class="uk-label">Django</span>
-          <span class="uk-label">React</span>
-          <span class="uk-label">Figma</span>
-          <span class="uk-label">Html/CSS</span>
-          <span class="uk-label">Unqork</span>
-          <span class="uk-label">Salesforce</span>
-          <span class="uk-label">Hubspot</span>
-          <p class="uk-text-large">Some brands & companies I've worked at,
-            either directly or via contract/firm.</p>
-        </div>
-      </div>
-
-      <div class="uk-flex-center uk-background-default uk-padding uk-animation-fade">
-        <div class="uk-text-center uk-child-width-1-3@s uk-flex-center" uk-grid>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="/img/unqork_logo.jpeg" width="100" height="" alt="unqork" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="/img/ey_logo.png" width="70" height="" alt="ernst and young" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img class="" data-src="/img/lawtrades_logo.png" width="120" height="" alt="lawtrades" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="/img/fidelity_logo.png" width="110" height="" alt=fidelity"" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="/img/discover_logo.png" width="110" height="" alt="discover" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img class="" data-src="/img/un_logo.jpeg" width="120" height="" alt="united nations" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="/img/mastercard_logo.png" width="80" height="" alt="mastercard" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img data-src="/img/westpac_logo.png" width="110" height="" alt="westpac" uk-img></div>
-          </div>
-          <div>
-            <div class="uk-height-small uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle"><img class="" data-src="/img/hamarra_logo.png" width="120" height="" alt="hamarra" uk-img></div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="uk-height-large uk-card uk-card-body uk-flex uk-flex-center uk-flex-middle uk-padding-large-top"><h3 style="font-size:6vw"><b>Let's talk<br><a href="mailto:sarnayak22@gmail.com" target="_blank">sarnayak22@gmail.com</a></b></h3></div>
-
-      <div class="uk-flex uk-flex-center uk-animation-slide-bottom-small">
-        <div class="uk-card uk-card-body"><a href="https://www.linkedin.com/in/sarthaknayak22/" target="_blank" class="uk-icon-link" uk-icon="linkedin"></a>
-        </div>
-        <div class="uk-card uk-card-body"><a href="https://www.youtube.com/channel/UCelyoMiawNF68AriqByazOw" target="_blank" class="uk-icon-link" uk-icon="youtube"></a>
-        </div>
-        <div class="uk-card uk-card-body"><a href="mailto:sarnayak22@gmail.com" target="_blank" class="uk-icon-link" uk-icon="mail"></a>
-        </div>
-      </div>
-
-      <p class="uk-padding-small uk-text-meta uk-text-light uk-text-center uk-animation-fade uk-animation-slide-bottom-small uk-animation-slide-bottom-small">Sarthak Nayak © 2022 All Rights Reserved.</p>
-        
-      
-         <!-- end of site content -->
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+      <div id="motion-tools" class="motion-tools" hidden><span id="motion-status" role="status"></span><button id="motion-recenter" disabled>Recenter</button></div>
+    </div>
+  </footer>
+  <aside id="camera-panel" class="camera-panel" aria-label="Hand controls" hidden>
+    <div class="camera-heading"><span><i id="camera-dot"></i> HAND CONTROLS</span><button id="camera-close" aria-label="Stop camera">×</button></div>
+    <div class="camera-preview"><video id="camera-video" muted playsinline autoplay></video><canvas id="hand-overlay" width="640" height="480"></canvas><span id="camera-search">Hold your hands up</span></div>
+    <p id="camera-status" role="status"><span id="camera-status-full">Getting ready…</span><span id="camera-status-short">Starting…</span></p>
+    <div class="camera-meta"><button id="recenter">Recenter</button><span>Video stays on your device.</span></div>
+  </aside>
+  <aside id="notice" class="notice" hidden><div><p id="notice-message" role="status"></p><a id="notice-open" target="_blank" rel="noopener noreferrer" hidden>Open site in browser</a></div><button id="notice-close" aria-label="Dismiss message">×</button></aside>
+  <noscript><p class="noscript">The marble game needs JavaScript. Your profile and social links are available above.</p></noscript>
+  <script type="module" src="./js/app.js?v=20"></script>
+</body>
 </html>
