@@ -5,10 +5,12 @@ import { createScene, screenToTray } from './scene.js?v=20';
 import { createHandController } from './hands.js';
 import { createDeviceController } from './device.js?v=11';
 import { profile } from './profile.js';
+import { createOpenAILogo } from './openai-mark.js';
 
 const $=id=>document.getElementById(id);
 $('profile-name').textContent=profile.name;
 $('profile-company').textContent=profile.companyLine||`Currently at ${profile.company}`;
+$('profile-company').append(createOpenAILogo());
 document.title=profile.name;
 $('linkedin').href=profile.linkedin;
 $('sample-label').hidden=!profile.sample;
